@@ -1,8 +1,13 @@
 describe('Home Page', () => {
   it('Load Properly', () => {
-    cy.viewport(1280,768)
-    cy.visit('https://adactinhotelapp.com/')
 
+    //View Adjustment
+    cy.viewport(1280,768)
+
+    //Visit Website
+    cy.URL()
+
+    //Assertion
     cy.get('.logo').should('exist')
   })
 })
