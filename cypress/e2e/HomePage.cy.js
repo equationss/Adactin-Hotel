@@ -7,6 +7,9 @@ describe('Home Page', () => {
     //Visit Website
     cy.URL()
 
+    //Go to 2nd Build
+    cy.get('a > strong').click()
+
     //Assertion
     cy.get('.logo').should('exist')
   })

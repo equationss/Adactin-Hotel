@@ -6,6 +6,9 @@ describe('New SignUP', () => {
   
       //Visit Website
       cy.URL()
+
+      //Go to 2nd Build
+      cy.get('a > strong').click()
   
       //Assertion
       cy.get('.logo').should('exist')
@@ -20,22 +23,26 @@ describe('New SignUP', () => {
       //cy.get('[align="right"] > a').click()
 
       //Registration Form
-      cy.get('#username').type('JJunaid')
+      cy.get('#username').type('Equations786')
       cy.get('#password').type('Rj@6606168')
       cy.get('#re_password').type('Rj@6606168')
       cy.get('#full_name').type('Raja Junaid Ullah Khan')
-      cy.get('#email_add').type('junaidraja@gmail.com')
+      cy.get('#email_add').type('sdgefg@mailinator.com')
 
       //Wait for Manaul Captcha
+      cy.get('#captcha-form').click()
       cy.wait(10000)
       
       //For Terms & Conditions
       cy.get('#tnc_box').click()
       
       //To Register
-      //cy.get('#Submit').click()
+      cy.get('#Submit').click()
 
       //To Reset Form
-      cy.get('#Reset').click()
+      //cy.get('#Reset').click()
+
+      //Registration Successful Verification
+      cy.get('.reg_success').should('exist')
     })
   })
