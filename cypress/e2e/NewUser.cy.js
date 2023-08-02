@@ -23,11 +23,11 @@ describe('New SignUP', () => {
       //cy.get('[align="right"] > a').click()
 
       //Registration Form
-      cy.get('#username').type('Equations786')
+      cy.get('#username').type('equationss0900')
       cy.get('#password').type('Rj@6606168')
       cy.get('#re_password').type('Rj@6606168')
       cy.get('#full_name').type('Raja Junaid Ullah Khan')
-      cy.get('#email_add').type('sdgefg@mailinator.com')
+      cy.get('#email_add').type('TP123@mailinator.com')
 
       //Wait for Manaul Captcha
       cy.get('#captcha-form').click()
